@@ -5,7 +5,7 @@ Home: https://github.com/prjemian/spec2nexus
 
 Package license: CC-BY-4.0
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/spec2nexus-feedstock/blob/master/LICENSE.txt)
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/spec2nexus-feedstock/blob/main/LICENSE.txt)
 
 Summary: command-line tool to convert SPEC data files to NeXus HDF5
 
@@ -23,8 +23,8 @@ Current build status
 
 <table><tr><td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=15549&branchName=master">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/spec2nexus-feedstock?branchName=master">
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=15549&branchName=main">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/spec2nexus-feedstock?branchName=main">
       </a>
     </td>
   </tr>
