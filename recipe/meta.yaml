@@ -34,6 +34,7 @@ requirements:
 test:
   requires:
     - pip
+    - setuptools-scm
   imports:
     - spec2nexus
   commands:
