@@ -48,7 +48,7 @@ about:
   home: https://github.com/prjemian/spec2nexus
   license: CC-BY-4.0
   license_family: CC
-  license_file: src/{{ name }}/LICENSE.txt
+  license_file: {{ name }}/LICENSE.txt
   summary: 'command-line tool to convert SPEC data files to NeXus HDF5'
   description: |
     spec2nexus converts SPEC data files and scans into NeXus HDF5 files.
