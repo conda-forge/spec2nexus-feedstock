@@ -28,7 +28,7 @@ requirements:
     - python >=3.7
     - h5py
     - lxml
-    - matplotlib
+    - matplotlib-base
     - numpy
 
 test:
