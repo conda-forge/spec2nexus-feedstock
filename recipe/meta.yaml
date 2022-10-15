@@ -1,5 +1,5 @@
 {% set name = "spec2nexus" %}
-{% set version = "2021.2.3" %}
+{% set version = "2021.2.4rc1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f3206130f7ff8c278868ba9b0c0202c03a4b8b2f791120e5d426279c820849bb
+  sha256: b2fb829b2f1935f987dc8ed602acac26eaa317ac17891eb51be31bd07563837a
 
 build:
   noarch: python
@@ -37,6 +37,7 @@ test:
     - setuptools-scm
   imports:
     - spec2nexus
+    - spec2nexus.spec
   commands:
     - pip check
     - extractSpecScan -h
