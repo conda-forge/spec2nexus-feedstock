@@ -1,5 +1,5 @@
 {% set name = "spec2nexus" %}
-{% set version = "2021.2.4rc1" %}
+{% set version = "2021.2.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b2fb829b2f1935f987dc8ed602acac26eaa317ac17891eb51be31bd07563837a
+  sha256: 50e29906f28832ef59fb73ce3162ff0f13073c821aacb437350764d8139c3247
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - extractSpecScan = spec2nexus.extractSpecScan:main
     - spec2nexus = spec2nexus.nexus:main
@@ -51,7 +51,7 @@ about:
   license: CC-BY-4.0
   license_family: CC
   license_file: {{ name }}/LICENSE.txt
-  summary: 'command-line tool to convert SPEC data files to NeXus HDF5'
+  summary: command-line tool to convert SPEC data files to NeXus HDF5
   description: |
     spec2nexus converts SPEC data files and scans into NeXus HDF5 files.
     It is pure Python code with few dependencies.
