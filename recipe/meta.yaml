@@ -1,5 +1,5 @@
 {% set name = "spec2nexus" %}
-{% set version = "2021.2.6rc1" %}
+{% set version = "2021.2.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: cd45b403f5aa7ada787c238b50c7d85fa4f624b55fe16a363f4a03807f524ef8
+  sha256: 28a591a830fc0283c2f889c9a4b30c261846c996501be63b8d6bd1d46c005677
 
 build:
   noarch: python
