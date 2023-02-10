@@ -1,5 +1,5 @@
 {% set name = "spec2nexus" %}
-{% set version = "2021.2.6" %}
+{% set version = "2021.2.6rc1" %}
 
 package:
   name: {{ name|lower }}
