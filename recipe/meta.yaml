@@ -23,7 +23,8 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
-    - setuptools-scm
+    - setuptools >=64
+    - setuptools-scm >=8.0
   run:
     - python >={{ python_min }}
     - h5py
