@@ -6,12 +6,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 28a591a830fc0283c2f889c9a4b30c261846c996501be63b8d6bd1d46c005677
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - extractSpecScan = spec2nexus.extractSpecScan:main
@@ -21,11 +21,11 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - setuptools-scm
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - h5py
     - lxml
     - matplotlib-base
@@ -35,6 +35,7 @@ test:
   requires:
     - pip
     - setuptools-scm
+    - python {{ python_min }}
   imports:
     - spec2nexus
     - spec2nexus.spec
