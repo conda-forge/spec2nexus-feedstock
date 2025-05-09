@@ -7,13 +7,13 @@ Home: https://github.com/prjemian/spec2nexus
 
 Package license: CC-BY-4.0
 
-Summary: command-line tool to convert SPEC data files to NeXus HDF5
+Summary: Command-line tool & library to convert SPEC data files to NeXus HDF5
 
 Development: https://github.com/prjemian/spec2nexus
 
 Documentation: https://prjemian.github.io/spec2nexus
 
-spec2nexus converts SPEC data files and scans into NeXus HDF5 files.
+spec2nexus reads SPEC data files, writes into NeXus HDF5 files.
 It is pure Python code with few dependencies.
 
 

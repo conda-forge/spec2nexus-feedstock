@@ -1,5 +1,5 @@
 {% set name = "spec2nexus" %}
-{% set version = "2021.2.6" %}
+{% set version = "2021.2.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 28a591a830fc0283c2f889c9a4b30c261846c996501be63b8d6bd1d46c005677
+  sha256: 7c0ab4c455f19dea73cfb1e549f707118d9ef03a005f1e7180dc56e3de4d7a03
 
 build:
   noarch: python
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - extractSpecScan = spec2nexus.extractSpecScan:main
@@ -23,14 +23,14 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
-    - setuptools >=64
-    - setuptools-scm >=8.0
+    - setuptools >=77
+    - setuptools-scm >=8
   run:
     - python >={{ python_min }}
     - h5py
     - lxml
     - matplotlib-base
-    - numpy
+    - numpy >=2
 
 test:
   requires:
@@ -52,10 +52,10 @@ about:
   home: https://github.com/prjemian/spec2nexus
   license: CC-BY-4.0
   license_family: CC
-  license_file: {{ name }}/LICENSE.txt
-  summary: command-line tool to convert SPEC data files to NeXus HDF5
+  license_file: LICENSE
+  summary: Command-line tool & library to convert SPEC data files to NeXus HDF5
   description: |
-    spec2nexus converts SPEC data files and scans into NeXus HDF5 files.
+    spec2nexus reads SPEC data files, writes into NeXus HDF5 files.
     It is pure Python code with few dependencies.
   doc_url: https://prjemian.github.io/spec2nexus
   dev_url: https://github.com/prjemian/spec2nexus
